@@ -1,0 +1,99 @@
+.logo {
+	width: 400px;
+	height: 80px;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	width: 100%;
+}
+
+.banner {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.subfooter {
+	background: #2a2a2a;
+	padding: 10px 0;
+}
+
+.subfooter .copyright-text p {
+	font-family: "Montserrat", sans-serif;
+	color: white;
+}
+
+.subfooter .copyright-text p a {
+	color: #ff6600;
+}
+
+@media (max-width: 767px) {
+	.subfooter .copyright-text {
+		text-align: center;
+	}
+}
+
+.subfooter .to-top {
+	display: block;
+	height: 45px;
+	width: 45px;
+	text-align: center;
+	background: #ff6600;
+	float: right;
+}
+
+.subfooter .to-top i {
+	font-size: 1.5rem;
+	color: #fff;
+	line-height: 45px;
+}
+
+@media (max-width: 767px) {
+	.subfooter .to-top {
+		float: none;
+		margin: auto;
+		margin-top: 30px;
+	}
+}
+
+/* ARTICLE STYLING */
+
+.article-img {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+	.article-title {
+		font-size: 28px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.article-title {
+		font-size: 20px;
+	}
+}
+
+.slash {
+	height: 9px;
+	color: black;
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="3px" height="3px" viewBox="0 0 3 3" fill="black"><polygon points="0,0.5 0,1.5 1.5,3 2.5,3"/><polygon points="2.5,0 1.5,0 3,1.5 3,0.5"/></svg>');
+	background-size: 3px 3px;
+	width: 100%;
+}
+
+.figure-title {
+	margin-top: -33px;
+	font-size: 12px;
+	text-align: center;
+}
+
+figure {
+	padding: 15px;
+}
