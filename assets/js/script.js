@@ -1,9 +1,12 @@
 $(document).ready(function () {
+
 	var nArticle = 0;
 	var win = $(window);
+
 	$("#theme-switch-light").hide();
 
 	getArticle(nArticle);
+	checkUserLogged();
 
 	win.scroll(function () {
 		if ($(document).height() - win.height() == win.scrollTop()) {
@@ -44,6 +47,16 @@ $(document).ready(function () {
 		$("#theme-switch-light").hide();
 		$("#theme-switch-dark").show();
 	});
+
+	$("#form-modal").submit(function () {
+		localStorage.setItem("username", $(this).serializeArray()[0]["value"]);
+	});
+
+	$("#logout_user").click(function () {		
+		localStorage.clear();
+		location.reload();
+	});
+
 });
 
 function getArticle(nArticle = 0) {
@@ -66,4 +79,17 @@ function getArticle(nArticle = 0) {
 		$("#article-list").append(output);
 
 	});
+}
+
+function checkUserLogged() {
+	if (localStorage.getItem("username")) {
+		$("#login").hide();
+		$(".username_logged").show();
+		$(".username_logged").html("<a href='#'>Welcome " + localStorage.getItem("username") + "</a>");
+		$("#logout_user").show();
+	} else {
+		$("#login").show();
+		$(".username_logged").hide();
+		$("#logout_user").hide();
+	}
 }
