@@ -67,7 +67,6 @@
 	object-fit: cover;
 }
 
-
 @media screen and (max-width: 768px) {
 	.article-title {
 		font-size: 28px;
@@ -101,4 +100,24 @@ figure {
 .art-date {
 	color: #808080;
 	font-size: 10px;
+}
+
+.btn-customd {
+	color: white;
+	background-color: #2a2a2a;
+}
+
+.btn-customd:hover {
+	color: white;
+	background-color: #575757;
+}
+
+.btn-customl {
+	color: #2a2a2a;
+	background-color: white;
+}
+
+.btn-customl:hover {
+	color: #575757;
+	background-color: white;
 }
