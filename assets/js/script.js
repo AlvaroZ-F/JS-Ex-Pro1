@@ -10,6 +10,7 @@ $(document).ready(function () {
 
 	win.scroll(function () {
 		if ($(document).height() - win.height() == win.scrollTop()) {
+			console.log("ID counter increase happened: " + nArticle);
 			$(".loading").show();
 			nArticle++;
 			getArticle(nArticle);
@@ -59,7 +60,7 @@ $(document).ready(function () {
 
 });
 
-function getArticle(nArticle = 0) {
+function getArticle(nArticle) {
 	$.getJSON("posts.json", function (result) {
 
 		var output = '';
